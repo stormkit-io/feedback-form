@@ -46,7 +46,7 @@ export default async (req: IncomingMessage, res: ServerResponse) => {
   res.setHeader("Content-Type", "application/json");
   res.setHeader("Access-Control-Allow-Headers", "*");
   res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "OPTIONS, GET");
+  res.setHeader("Access-Control-Allow-Methods", "OPTIONS, GET, POST");
   res.setHeader("Access-Control-Max-Age", 2592000); // 30 days
 
   if (req.method === "OPTIONS") {
