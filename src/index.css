@@ -12,15 +12,15 @@
   justify-content: center;
   cursor: pointer;
   transition: transform 0.7s ease-in-out;
-  background-color: rgb(139, 36, 177, 0.9);
-  border: 1px solid rgb(139, 36, 177);
+  background-color: #811c64;
+  border: none;
   border-radius: 50%;
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
 .ff-button:hover {
-  background-color: rgb(139, 36, 177, 0.6);
+  background-color: rgba(129, 28, 100, 0.85);
   transform: rotate(360deg);
 }
 
@@ -32,6 +32,7 @@
 }
 
 .ff-form {
+  background-color: #201e5d;
   max-width: 320px;
   overflow: hidden;
   margin-bottom: 1rem;
@@ -39,8 +40,8 @@
   font-weight: normal;
   line-height: 1.25;
   min-width: 360px;
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.6),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.28), 0px 1px 3px 0px rgba(0, 0, 0, 0.24);
 }
 
 .ff-text-opaque {
@@ -51,8 +52,8 @@
   padding: 1.5rem;
   font-weight: normal;
   color: white;
-  background-color: rgb(139, 36, 177, 0.9);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(214, 24, 65, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .ff-form-header {
@@ -66,6 +67,10 @@
   padding-top: 0.5rem;
   font-size: 0.8rem;
   font-weight: normal;
+}
+
+.ff-form-body-wrapper {
+  background-color: rgba(214, 24, 65, 0.1);
 }
 
 .ff-form-body-wrapper .ff-label {
@@ -82,7 +87,7 @@
   padding: 1.5rem;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
-  background-color: rgb(139, 36, 177, 0.05);
+  background-color: rgba(76, 71, 144, 0.25);
   outline: none;
   font-size: 1rem;
 }
@@ -98,7 +103,7 @@
   padding: 0;
   width: 1.5rem;
   height: 1.5rem;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.25);
   border: none;
   cursor: pointer;
 }
@@ -108,7 +113,7 @@
 }
 
 .ff-star.ff-selected {
-  background-color: rgb(139, 36, 177, 0.9);
+  background-color: #811c64;
 }
 
 .ff-form-footer {
@@ -116,8 +121,8 @@
 }
 
 .ff-form-submit {
-  background-color: rgb(139, 36, 177, 0.9);
-  border: 1px solid rgb(139, 36, 177);
+  background-color: #811c64;
+  border: 1px solid #811c6490;
   color: white;
   padding: 1rem 5rem;
   border-radius: 3px;
@@ -129,12 +134,13 @@
 
 .ff-alert {
   margin: 0;
-  background-color: rgb(139, 36, 177, 0.05);
+  background-color: rgba(76, 71, 144, 0.25);
   padding: 1.5rem;
   margin-bottom: 1rem;
   color: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: flex-start;
+  color: white;
 }
 
 .ff-success-icon,
@@ -149,5 +155,5 @@
 }
 
 .ff-error-icon {
-  fill: rgb(163, 16, 16);
+  fill: #811c64;
 }
