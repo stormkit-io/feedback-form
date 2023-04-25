@@ -50,8 +50,6 @@ export default async (req: IncomingMessage, res: ServerResponse) => {
   res.setHeader("Access-Control-Allow-Methods", "OPTIONS, GET, POST");
   res.setHeader("Access-Control-Max-Age", 2592000); // 30 days
 
-  console.log("received request:", req.method);
-
   if (req.method === "OPTIONS") {
     res.statusCode = 200;
     res.end();
