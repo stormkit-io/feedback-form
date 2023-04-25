@@ -44,13 +44,16 @@ function readBody(req: IncomingMessage): Promise<Post> {
 
 export default async (req: IncomingMessage, res: ServerResponse) => {
   res.setHeader("Content-Type", "application/json");
+  res.setHeader("Connection", "keep-alive");
   res.setHeader("Access-Control-Allow-Headers", "*");
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "OPTIONS, GET, POST");
   res.setHeader("Access-Control-Max-Age", 2592000); // 30 days
 
+  console.log("received request:", req.method);
+
   if (req.method === "OPTIONS") {
-    res.write("");
+    res.statusCode = 200;
     res.end();
     return;
   }
