@@ -50,6 +50,15 @@ export default function Form() {
           return;
         }
 
+        const user = (() => {
+          try {
+            const { email } = JSON.parse(localStorage.getItem("skit_user"));
+            return email;
+          } catch {
+            return {};
+          }
+        })();
+
         setError(undefined);
         setSuccess(undefined);
         setLoading(true);
@@ -58,6 +67,7 @@ export default function Form() {
           method: "POST",
           headers: { "content-type": "application/json" },
           body: JSON.stringify({
+            user,
             stars: selectedStar,
             feedback,
           }),

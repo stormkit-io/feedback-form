@@ -12,7 +12,7 @@
   justify-content: center;
   cursor: pointer;
   transition: transform 0.7s ease-in-out;
-  background-color: #811c64;
+  background-color: rgba(120, 25, 59);
   border: none;
   border-radius: 50%;
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
@@ -20,7 +20,7 @@
 }
 
 .ff-button:hover {
-  background-color: rgba(129, 28, 100, 0.85);
+  background-color: rgba(120, 25, 59, 0.75);
   transform: rotate(360deg);
 }
 
@@ -90,6 +90,7 @@
   margin-bottom: 1rem;
   background-color: rgba(76, 71, 144, 0.25);
   outline: none;
+  color: white;
   font-size: 1rem;
 }
 
@@ -104,17 +105,17 @@
   padding: 0;
   width: 1.5rem;
   height: 1.5rem;
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.25);
   border: none;
   cursor: pointer;
 }
 
 .ff-star:hover {
-  background: rgba(0, 0, 0, 0.25);
+  background-color: rgb(215, 46, 105);
 }
 
 .ff-star.ff-selected {
-  background-color: #811c64;
+  background-color: rgba(120, 25, 59);
 }
 
 .ff-form-footer {
@@ -122,10 +123,10 @@
 }
 
 .ff-form-submit {
-  background-color: #811c64;
-  border: 1px solid #811c6490;
+  background-color: rgba(120, 25, 59);
+  border: 1px solid rgba(120, 25, 59, 0.6);
   color: white;
-  padding: 1rem 5rem;
+  padding: 0.75rem 5rem;
   border-radius: 3px;
   margin: 0 1.5rem;
   margin-bottom: 1.5rem;
@@ -173,7 +174,7 @@
 }
 
 .ff-error-icon {
-  fill: #811c64;
+  fill: rgba(120, 25, 59);
 }
 
 @keyframes ffRotateSpinner {

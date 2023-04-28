@@ -5,6 +5,7 @@ const url = process.env.FF_DISCORD_URL;
 interface Post {
   stars?: number;
   feedback?: string;
+  user?: string;
 }
 
 function readBody(req: IncomingMessage): Promise<Post> {
@@ -67,6 +68,13 @@ export default async (req: IncomingMessage, res: ServerResponse) => {
 
   const body = await readBody(req);
 
+  if (typeof body.user === "undefined") {
+    res.statusCode = 400;
+    res.write(JSON.stringify({ error: "missing user" }));
+    res.end();
+    return;
+  }
+
   if (
     typeof body.stars === "undefined" &&
     typeof body.feedback === "undefined"
@@ -98,6 +106,7 @@ export default async (req: IncomingMessage, res: ServerResponse) => {
           fields: [
             { name: "Stars", value: body.stars },
             { name: "Feedback", value: body.feedback },
+            { name: "Email", value: body.user },
           ],
         },
       ],
